@@ -275,7 +275,7 @@ header .navigation a:hover{
 }
 
 .projects .content::before{
-    content: "hover the card";
+    content: "hover or click";
     left: 0px;
     width: 400px;
     background-color:var(--blue);
