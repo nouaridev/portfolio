@@ -1,0 +1,1128 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  
+    @keyframes  light {
+        0%{
+            text-shadow:0 0 0px var(--blue);
+         
+        }
+        50%{
+            text-shadow:0 0 41px  var(--blue);
+         
+        }
+        100%{
+            text-shadow:0 0 0px var(--blue);
+           
+        }
+    }
+
+:root{
+    --blue:#3a6cf4;
+    --greywight: #f0f0f0;
+    --lightwhite:#fff;
+    --darkblue:#000016;
+}
+*{
+font-family: 'Poppins', sans-serif;
+padding: 0; 
+margin: 0;
+text-decoration: none;
+box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/*parent and conatainer*/
+.parent{
+    width: 100%;
+}
+
+section {
+    padding: 100px 500px;
+}
+
+/*header */
+
+
+header{
+    background-color: var(--greywight);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: fit-content;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    padding: 5px 500px;
+}
+header .logo{
+    color: var(--blue);
+    font-weight: bold;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 1px;
+    border-radius:5px ;
+}
+
+header .navigation{
+    display:flex;
+    width: 30%;
+    justify-content: space-between;
+}
+
+header .navigation a{
+    color: var(--blue);
+    font-size: 20px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    transition: .1s;
+    animation: light 3s 1s ease  infinite ;
+}
+header .navigation a:hover{
+    background-color: var(--blue);
+    color: var(--greywight);
+    transform: scale(1.1 , 1.1);
+    box-shadow: 0px 0px 10px var(--blue);
+}
+
+
+
+/*the  title  of  every  section*/
+.section-title{
+    font-size: 80px;
+    color: var(--blue);
+    margin-bottom: 60px;
+}
+
+
+
+
+/*main section*/
+.main{
+    width: 100%;
+    background-image: url(../pictures/تصميم\ بدون\ عنوان.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 900px;
+    animation: light 3s 1s ease  infinite ;
+    position: relative;
+}
+
+.main .main-card{
+    height: fit-content;
+    position: absolute;
+    top: 350px;
+    left: 100px;
+}
+
+.main .main-card h2{
+    color: var(--greywight);
+    font-size: 30px;
+
+}
+.main .main-card span{
+    color: var(--blue);
+    font-weight: bold;
+    font-size: 80px;
+    text-shadow: 0 0  5px black;
+
+}
+
+.main .main-card h3{
+    color: var(--greywight);
+    font-size: 34px;
+}
+
+.main .main-card .view{
+    background-color: var(--blue);
+    color: var(--greywight);
+    font-size: 20px;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 10px 30px;
+    margin-top: 30px;
+    transition: .1s;
+    display: block;
+    animation: light 3s 1s ease  infinite ;
+}
+
+.main .main-card .view:hover{
+    transform: scale(1.1 , 1.1);
+    box-shadow: 0px 0px 10px var(--blue);
+}
+
+
+.main .main-card .social-media{
+    margin-top: 50px;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+.main .main-card .social-media i{
+    color: var(--greywight);
+    font-size: 30px;
+    animation: light 3s 1s ease  infinite ;
+}
+.main .main-card .social-media i:hover{
+    color: var(--blue);
+    transform: scale(1.5 , 1.5);
+    text-shadow: 0 0 15px var(--blue);
+    transition: all .2s;
+}
+
+/*services*/
+
+
+.services{
+    background-color: var(--lightwhite);
+    text-align: center;
+}
+
+
+.services .cards{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
+    gap: 30px 20px;
+}
+
+.services .card{
+    width:400px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 60px 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.32);
+    transition: all .1s;
+}
+
+.services .card i{
+    color: var(--blue);
+    font-size: 140px;
+    margin-bottom: 15px;
+
+  
+}
+.services .card h2{
+    color: var(--blue);
+    font-size: 20px;
+    padding: 20px 0;
+}
+
+.card:hover{
+    transform: scale(1.1 ,1.1);
+    transform-style: preserve-3d;
+    box-shadow: 0 0 90px var(--blue);
+}
+.services .card:hover i{
+    transform: scale(0.9 ,0.9);
+    transition: all .5s;
+    animation: light 0.4s 0s ease  infinite ;
+
+}
+
+
+
+/*projects */
+
+.projects{
+    text-align: center;
+    background-color:var(--darkblue) ;
+}
+.projects .cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+}
+.projects .card{
+    min-width: 400px;
+    max-width: 400px; 
+    border-radius: 10px;
+    margin: auto;
+    row-gap: 100px;
+    overflow: hidden;
+    position: relative;
+    transition: .1s;
+}
+
+
+
+.projects .cards img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.projects .card .content{
+    position: absolute;
+    background-color: var(--greywight);
+    width: 100%;
+    bottom: -90px;
+    transition: .5s;
+    transition-delay: 0s;
+    padding: 20px 20px 10px 20px;
+}
+.projects .card:hover .content{
+    bottom: 0;
+
+}
+
+.projects .content::before{
+    content: "hover the card";
+    left: 0px;
+    width: 400px;
+    background-color:var(--blue);
+    color: var(--lightwhite);
+    padding: 1px 0;
+    position: absolute;
+    top: -30px;
+    transition-duration: 1s;
+    transition-delay:0s ;
+}
+
+.projects .card:hover .content::before{
+    top: 90px
+
+}
+.projects .card  p{
+    font-size: 13px;
+ padding-bottom: 20px;
+ text-align: left;
+}
+.projects .card h2{
+    float: left;
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--darkblue);
+}
+.projects .card a{
+    float: right;
+    color: var(--blue);
+    font-weight:bolder ;
+}
+
+
+/* contact */
+
+.contact h1{
+    text-align: center;
+}
+
+.contact .cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    justify-items: center;
+    gap: 30px 20px;
+}
+.contact .card{
+    width:400px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 60px 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.32);
+    transition: all .1s;
+    color: var(--darkblue);
+}
+
+.contact i{
+    color: var(--blue);
+    font-size: 90px;
+}
+
+.contact .p1{
+    padding: 25px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.contact .p2{
+    font-size: 18px;
+}
+
+.card:hover{
+    transform: scale(1.1 ,1.1);
+    transform-style: preserve-3d;
+    box-shadow: 0 0 90px var(--blue);
+}
+.contact .card:hover i{
+    transform: scale(0.9 ,0.9);
+    transition: all .5s;
+    animation: light 0.4s 0s ease  infinite ;
+}
+
+
+
+/* footer */
+
+
+footer{
+    padding: 30px 500px;
+    background-color: var(--darkblue);
+    display: flex;
+    justify-content: space-between;
+}
+
+
+footer p{
+    color: var(--lightwhite);
+    font-weight: bold;
+    font-size: 18px;
+}
+footer span{
+    color: var(--blue);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+footer .social-media{
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+footer .social-media i{
+    color: var(--greywight);
+    font-size: 30px;
+    animation: light 3s 1s ease  infinite ;
+}
+footer .social-media i:hover{
+    color: var(--blue);
+    transform: scale(1.5 , 1.5);
+    text-shadow: 0 0 15px var(--blue);
+    transition: all .2s;
+}
+
+
+/* end */
+@media only screen and (min-width:250px) {
+    section{
+        padding: 30px 5px;
+    }
+    header{
+        padding: 10px 5px;
+        flex-direction: column;
+    }
+    footer{
+        padding: 20px 5px;
+    }
+    .section-title{
+        font-size: 20px;
+    }
+
+    /* header */
+    header .navigation{
+        width: 65%;
+
+    }
+    
+    header .navigation a{
+        font-size: 10px;
+        height: 30px;
+    }
+
+    header .logo{
+        font-size: 20px;
+    }
+
+    /* main */
+    .main{
+        background-image: url(/pictures/phone.png);
+        height: 900px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main .main-card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: auto;
+        position: static;
+    }
+    .main .main-card::before{
+        content: '';
+        width: 150px;
+        height: 150px;
+        background-image: url(/pictures/IMG_1902.JPG);
+        background-size: 150px;
+        border-radius: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-bottom: 15px;
+    }
+    .main .main-card h2{
+        font-size: 20px;
+    }
+    .main .main-card span{
+        font-size: 35px;
+    }
+    .main .main-card h3{
+        font-size: 20px;
+    }
+
+    .main  .main-card .social-media{
+        width: 200px;
+    }
+
+    /* services */
+    .services .cards{
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 20px;
+    }
+    .services .card{
+        width: 160px;
+        padding: 15px 5px;
+        background-color: var(--lightwhite);
+    }
+    .services  .card i{
+        font-size: 50px;
+    }
+    .services  .card h2{
+        padding: 0px 0px 5px 0px;
+    }
+    .services .card p{
+        font-size: 10px;
+    }
+
+ /* projects */
+
+   .projects .cards {
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px 30px;
+}
+.projects .card{
+    min-width: 250px;
+    max-width: 250px;
+}
+.projects .cards img{
+    width: 250px;
+}
+.projects .card .content{
+    padding: 10px 10px 5px 20px;
+}
+.projects .content::before{
+    width: 250px;
+    top: -50px;
+}
+
+
+    /* contact */
+
+    .contact .cards{
+        grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));
+    }
+    .contact .card{
+        width: 150px;
+        padding: 10px 20px;
+        text-align: center;
+    }
+
+    .contact .card i{
+        font-size: 50px;
+    }
+    .contact .card .p1 {
+        padding: 20px 0px;
+    }
+    .contact .card #long{
+        font-size: 10px;
+    }
+
+    /* foooter */
+
+    footer .left p{
+        font-size: 11px;
+    }
+    footer .left span{
+        font-size: 12px;
+    }
+    footer .right{
+        width:40% ;
+    }
+    footer .social-media{
+        justify-content:space-around;
+        width:100%
+    }
+
+    footer .right i {
+        font-size: 20px;
+    }
+}
+
+
+@media only screen and (min-width:375px) {
+    section{
+        padding: 30px 10px;
+    }
+    header{
+        padding: 5px 10px;
+    }
+    footer{
+        padding: 30px 10px;
+    }
+    .section-title{
+        font-size: 30px;
+    }
+
+    /* header */
+    header .navigation{
+        width: 60%;
+    }
+    
+    header .navigation a{
+        font-size: 12px;
+    }
+    header .logo{
+        font-size: 20px;
+    }
+
+    /* main */
+    .main{
+        background-image: url(/pictures/phone.png);
+        height: 900px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main .main-card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: auto;
+        position: static;
+    }
+    .main .main-card::before{
+        content: '';
+        width: 150px;
+        height: 150px;
+        background-image: url(/pictures/IMG_1902.JPG);
+        background-size: 150px;
+        border-radius: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-bottom: 15px;
+    }
+    .main .main-card h2{
+        font-size: 20px;
+    }
+    .main .main-card span{
+        font-size: 35px;
+    }
+    .main .main-card h3{
+        font-size: 20px;
+    }
+
+    .main  .main-card .social-media{
+        width: 200px;
+    }
+
+    /* services */
+    .services .cards{
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 20px;
+    }
+    .services .card{
+        width: 160px;
+        padding: 15px 5px;
+        background-color: var(--lightwhite);
+    }
+    .services  .card i{
+        font-size: 50px;
+    }
+    .services  .card h2{
+        padding: 0px 0px 5px 0px;
+    }
+    .services .card p{
+        font-size: 10px;
+    }
+
+ /* projects */
+
+   .projects .cards {
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px 30px;
+}
+.projects .card{
+    min-width: 250px;
+    max-width: 250px;
+}
+.projects .cards img{
+    width: 250px;
+}
+.projects .card .content{
+    padding: 10px 10px 5px 20px;
+}
+.projects .content::before{
+    width: 250px;
+    top: -50px;
+}
+
+
+    /* contact */
+
+    .contact .cards{
+        grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));
+    }
+    .contact .card{
+        width: 150px;
+        padding: 10px 20px;
+        text-align: center;
+    }
+
+    .contact .card i{
+        font-size: 50px;
+    }
+    .contact .card .p1 {
+        padding: 20px 0px;
+    }
+    .contact .card #long{
+        font-size: 10px;
+    }
+
+    /* foooter */
+
+    footer .left p{
+        font-size: 12px;
+    }
+    footer .left span{
+        font-size: 13px;
+    }
+    footer .right{
+        width:40% ;
+    }
+    footer .social-media{
+        justify-content:space-around;
+        width:100%
+    }
+
+    footer .right i {
+        font-size: 20px;
+    }
+}
+
+
+
+@media only screen and (min-width:425px) {
+    section{
+        padding: 30px 10px;
+    }
+    header{
+        padding: 5px 10px;
+        flex-direction: row;
+    }
+    footer{
+        padding: 30px 10px;
+    }
+    .section-title{
+        font-size: 40px;
+    }
+
+    /* header */
+    header .navigation{
+        width: 50%;
+    }
+    
+    header .navigation a{
+        font-size: 12px;
+    }
+    header .logo{
+        font-size: 20px;
+    }
+
+    /* main */
+    .main{
+        background-image: url(/pictures/phone.png);
+        height: 900px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main .main-card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: auto;
+        position: static;
+    }
+    .main .main-card::before{
+        content: '';
+        width: 150px;
+        height: 150px;
+        background-image: url(/pictures/IMG_1902.JPG);
+        background-size: 150px;
+        border-radius: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-bottom: 15px;
+    }
+    .main .main-card h2{
+        font-size: 25px;
+    }
+    .main .main-card span{
+        font-size: 39px;
+    }
+    .main .main-card h3{
+        font-size: 20px;
+    }
+
+    .main  .main-card .social-media{
+        width: 200px;
+    }
+
+    /* services */
+    .services .cards{
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 20px;
+    }
+    .services .card{
+        width: 160px;
+        padding: 15px 5px;
+        background-color: var(--lightwhite);
+    }
+    .services  .card i{
+        font-size: 40px;
+    }
+    .services  .card h2{
+        padding: 0px 0px 5px 0px;
+    }
+    .services .card p{
+        font-size:10px;
+    }
+
+ /* projects */
+
+   .projects .cards {
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px 30px;
+}
+.projects .card{
+    min-width: 250px;
+    max-width: 250px;
+}
+.projects .cards img{
+    width: 250px;
+}
+.projects .card .content{
+    padding: 10px 10px 5px 20px;
+}
+.projects .content::before{
+    width: 250px;
+    top: -50px;
+}
+
+
+    /* contact */
+
+    .contact .cards{
+        grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));
+    }
+    .contact .card{
+        width: 150px;
+        padding: 10px 20px;
+        text-align: center;
+    }
+
+    .contact .card i{
+        font-size: 50px;
+    }
+    .contact .card .p1 {
+        padding: 20px 0px;
+    }
+    .contact .card #long{
+        font-size: 10px;
+    }
+
+    /* foooter */
+
+    footer .left p{
+        font-size: 12px;
+    }
+    footer .left span{
+        font-size: 13px;
+    }
+    footer .social-media{
+        justify-content:space-around
+    }
+
+    footer .right i {
+        font-size: 23px;
+    }
+}
+
+@media only screen and (min-width:768px) {
+    section{
+        padding: 50px 50px;
+    }
+    header{
+        padding: 5px 50px;
+    }
+    footer{
+        padding: 30px 50px;
+    }
+    .section-title{
+        font-size: 40px;
+    }
+
+    /* header */
+    header .navigation a{
+        font-size: 14px;
+    }
+
+    /* main */
+    .main{
+        background-image: url(/pictures/تصميم\ بدون\ عنوان.png);
+        background-position: 0px 10px;
+        height: 900px;
+    }
+
+    .main .main-card{
+        display: block;
+        text-align: left;
+        left: 50px;
+        top: 350px;
+    }
+    .main .main-card h2{
+        font-size: 25px;
+    }
+    .main .main-card span{
+        font-size: 60px;
+    }
+    .main .main-card h3{
+        font-size: 25px;
+    }
+
+    .main  .main-card .social-media{
+        width: 200px;
+    }
+
+    /* services */
+    .services .cards{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .services .card{
+        width: 200px;
+        padding: 15px 5px;
+    }
+    .services  .card i{
+        font-size: 60px;
+    }
+    .services  .card h2{
+        padding: 0px 0px 10px 0px;
+    }
+    .services .card p{
+        font-size: 11px;
+    }
+
+ /* projects */
+
+   .projects .cards {
+    grid-template-columns:repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px 30px;
+}
+.projects .card{
+    min-width: 250px;
+    max-width: 250px;
+}
+.projects .cards img{
+    width: 250px;
+}
+.projects .card .content{
+    padding: 10px 10px 5px 20px;
+}
+.projects .content::before{
+    width: 250px;
+    top: -50px;
+}
+
+
+    /* contact */
+
+    .contact .cards{
+        grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .contact .card{
+        width: 200px;
+        padding: 40px 20px;
+    }
+
+    .contact .card i{
+        font-size: 60px;
+    }
+    .contact .card #long{
+        font-size: 13px;
+    }
+
+}
+
+
+@media only screen and (min-width:1024px) {
+
+    
+   section{
+        padding: 100px 100px;
+    }
+    header{
+        padding: 5px 100px;
+    }
+    footer{
+        padding: 30px 100px;
+    }
+    .section-title{
+        font-size: 60px;
+    } 
+    /* main */
+    .main{
+        background-position: 0px 10px;
+        display: block;
+    }
+    .main .main-card{
+        position: absolute;
+        left: 100px;
+    }
+    .main .main-card h2{
+        font-size: 29px;
+    }
+    .main .main-card span{
+        font-size: 60px;
+    }
+    .main .main-card h3{
+        font-size: 29px;
+    }
+    .main .main-card .social-media{
+        width: 196px;
+    }
+    /* services */
+    .services .cards{
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .services .card{
+        width: 250px;
+        padding: 20px 10px;
+    }
+    .services  .card i{
+        font-size: 70px;
+    }
+    .services .card p{
+        font-size: 12px;
+    }
+
+    /* projects */
+
+    .projects .cards {
+        grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .projects .card{
+        min-width: 250px;
+        max-width: 250px;
+    }
+    .projects .cards img{
+        width: 250px;
+    }
+    .projects .card .content{
+        padding: 10px 10px 5px 20px;
+    }
+    .projects .content::before{
+        width: 250px;
+        top: -50px;
+    }
+
+    /* contact */
+
+    .contact .cards{
+        grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .contact .card{
+        width: 250px;
+        padding: 40px 20px;
+    }
+
+    .contact .card i{
+        font-size: 70px;
+    }
+}
+
+
+@media only screen and (min-width:1440px) {
+
+    
+    section{
+        padding: 100px 200px;
+    }
+    header{
+        padding: 5px 200px;
+    }
+    footer{
+        padding: 30px 200px;
+    }
+    .section-title{
+        font-size: 70px;
+    }
+    /* main */
+    .main{
+        background-position: 0px 0px;
+    }
+    .main .main-card{
+        top: 280px;
+        left: 200px;
+    }
+    .main .main-card h2{
+        font-size: 29px;
+    }
+    .main .main-card span{
+        font-size: 60px;
+    }
+    .main .main-card h3{
+        font-size: 29px;
+    }
+    .main .main-card .social-media{
+        width: 196px;
+    }
+    /* services */
+
+
+}
+
+@media only screen and (min-width: 2560px) {
+    section{
+        padding: 100px 500px;
+    }
+    header{
+        padding: 5px 500px;
+    }
+    footer{
+        padding: 30px 500px;
+    }
+    .section-title{
+        font-size: 70px;
+    }
+
+    /* main */
+    .main{
+        background-repeat: repeat-x;
+        background-size: cover;
+        background-position: 0px 0px;
+    }
+    .main .main-card{
+        top: 200px;
+        left: 500px;
+    }
+    .main .main-card h2{
+        font-size: 40px;
+    }
+    .main .main-card span{
+        font-size: 99px;
+    }
+    .main .main-card h3{
+        font-size: 40px;
+    }
+
+}
