@@ -4,15 +4,15 @@
     @keyframes  light {
         0%{
             text-shadow:0 0 0px var(--blue);
-         
+        
         }
         50%{
             text-shadow:0 0 41px  var(--blue);
-         
+        
         }
         100%{
             text-shadow:0 0 0px var(--blue);
-           
+        
         }
     }
 
@@ -107,7 +107,7 @@ header .navigation a:hover{
 /*main section*/
 .main{
     width: 100%;
-    background-image: url(../pictures/تصميم\ بدون\ عنوان.png);
+    background-image: url(../pictures/smail.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -208,8 +208,6 @@ header .navigation a:hover{
     color: var(--blue);
     font-size: 140px;
     margin-bottom: 15px;
-
-  
 }
 .services .card h2{
     color: var(--blue);
@@ -881,7 +879,7 @@ footer .social-media i:hover{
 
     /* main */
     .main{
-        background-image: url(/pictures/تصميم\ بدون\ عنوان.png);
+        background-image: url(/pictures/smail.png);
         background-position: 0px 10px;
         height: 900px;
     }
