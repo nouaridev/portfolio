@@ -48,7 +48,7 @@ section {
 
 
 header{
-    background-color: var(--greywight);
+    background-color: var(--darkblue);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -413,14 +413,37 @@ header .navigation a:hover{
     transform-style: preserve-3d;
     box-shadow: 0 0 90px var(--blue);
 }
+
 .contact .card:hover i{
     transform: scale(0.9 ,0.9);
     transition: all .5s;
     animation: light 0.4s 0s ease  infinite ;
 }
 
-
-
+section.contact.c2{
+    background-color: var(--darkblue);
+}
+section.contact.c2 .cards .card{
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.32);
+    color: var(--greywight);
+    font-weight: 900;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition:1s;
+}
+section.contact.c2 .cards .card:hover{
+    box-shadow: 0 0 10px var(--blue);
+}
+section.contact.c2 .cards .card.hovered{
+    transform: scale(1.1 ,1.1);
+    transform-style: preserve-3d;
+    box-shadow: 0 0 10px var(--blue);
+}
+.contact .card.hovered i{
+    transform: scale(0.9 ,0.9);
+    transition: all .5s;
+    animation: light 0.4s 0s ease  infinite ;
+}
 /* footer */
 
 
@@ -559,7 +582,7 @@ footer .social-media i:hover{
 
 
     /* contact */
-
+    
     .contact .cards{
         grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));
     }

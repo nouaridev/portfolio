@@ -60,3 +60,44 @@ incarr.forEach(el => el.addEventListener("click", ()=> {
     window.localStorage.slnum= el.textContent; 
     update();
 }))
+
+
+
+// cards hover effect 
+
+let cards= document.querySelectorAll(".contact.c2 .cards .card");
+console.log(cards)
+
+// for(let i=0 ; i<cards.length ;i++){
+//     setTimeout(()=>{
+//         for(let j = 0 ; j < cards.length; j++){
+//             if(j == i){
+//                 cards[j].classList.add("hovered")
+//             }else{
+//                 cards[j].classList.remove("hovered")
+//             }console.log(cards[i])
+//         }
+//     },4000)
+// }
+let i =-1; 
+setInterval(
+    ()=>{
+        i++; 
+        for(let j = 0 ;j<cards.length ;j++){
+            if(j == i){
+                cards[j].classList.add("hovered")
+                }else{
+                cards[j].classList.remove("hovered")
+                }
+        }
+        if(i == cards.length){i=-1}
+    }
+    ,700
+)
+setInterval(()=>{
+    window.localStorage.slnum = +window.localStorage.slnum + 1 ; 
+    update();
+    if( window.localStorage.slnum == imgs.length ){
+        window.localStorage.slnum =  1 ; 
+    }
+},2000)
