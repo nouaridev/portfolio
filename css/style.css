@@ -55,7 +55,7 @@ header{
     height: fit-content;
     position: fixed;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
     padding: 5px 500px;
 }
 header .logo{
@@ -70,6 +70,7 @@ header .logo{
 header .navigation{
     display:flex;
     width: 30%;
+    max-width: 300px;
     justify-content: space-between;
 }
 
@@ -106,22 +107,31 @@ header .navigation a:hover{
 
 /*main section*/
 .main{
-    width: 100%;
-    background-image: url(../pictures/smail.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
+    background-image: url(/pictures/phone.png);
     height: 900px;
-    animation: light 3s 1s ease  infinite ;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .main .main-card{
-    height: fit-content;
-    position: absolute;
-    top: 350px;
-    left: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    position: static;
+}
+.main .main-card::before{
+    content: '';
+    width: 150px;
+    height: 150px;
+    background-image: url(/pictures/IMG_1902.JPG);
+    background-size: 150px;
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 15px;
 }
 
 .main .main-card h2{
@@ -234,79 +244,133 @@ header .navigation a:hover{
 .projects{
     text-align: center;
     background-color:var(--darkblue) ;
+
 }
+
+
 .projects .cards{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 20px;
-}
-.projects .card{
-    min-width: 400px;
-    max-width: 400px; 
-    border-radius: 10px;
+    width: 80%;
     margin: auto;
-    row-gap: 100px;
-    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+.projects .cards a{
+    width: 90%;
+    z-index: -1;
+    opacity: 0;
+    border-radius: 30px;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    transition: 1s;
     position: relative;
-    transition: .1s;
+    margin-bottom: 30px;
+    text-shadow: 0 0  3px var(--blue);
 }
-
-
-
-.projects .cards img{
+.projects .cards a img{
     width: 100%;
-    height: auto;
-    border-radius: 10px;
+    height: 100%;
+    border-radius: 30px;
+    position: relative;
+    transition: 1s;
 }
-.projects .card .content{
+
+.projects .cards a .desc{
     position: absolute;
-    background-color: var(--greywight);
+    top: 0;
     width: 100%;
-    bottom: -90px;
-    transition: .5s;
-    transition-delay: 0s;
-    padding: 20px 20px 10px 20px;
-}
-.projects .card:hover .content{
-    bottom: 0;
-
-}
-
-.projects .content::before{
-    content: "hover or click";
-    left: 0px;
-    width: 400px;
-    background-color:var(--blue);
-    color: var(--lightwhite);
-    padding: 1px 0;
-    position: absolute;
-    top: -30px;
-    transition-duration: 1s;
-    transition-delay:0s ;
+    height: 100%;
+    background-color: #090e2375;;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4VW;
+    font-weight: 900;
+    opacity: 0;
+    z-index: -1;
+    color: #eee;
+    text-shadow: 0 0  3px var(--blue);
 }
 
-.projects .card:hover .content::before{
-    top: 90px
+.projects .cards a:hover .desc{
+    z-index: 1;
+    opacity: 1;
+  
+}
+.projects .cards a:hover{
+    transform: scale(1.1 ,1.1);
+    transform-style: preserve-3d;
+    box-shadow: 0 0 90px var(--blue);
+}
 
+.projects .cards a.active{
+    z-index: 1;
+    opacity: 1;
 }
-.projects .card  p{
-    font-size: 13px;
- padding-bottom: 20px;
- text-align: left;
+
+
+.slide-controlers{
+    width:100% ;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
 }
-.projects .card h2{
-    float: left;
-    font-size: 15px;
+.slide-controlers .prev:hover ,.slide-controlers  .next:hover{
+    transform: scale(1.1 ,1.1);
+    transform-style: preserve-3d;
+    box-shadow: 0 0 90px var(--blue);
+}
+.slide-controlers .prev ,.slide-controlers  .next{
+    background-color: var(--blue);
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px; 
+    padding: 5px ;
+    user-select: none;
+    margin-top: 30px;
+    width: 20%;
+}
+
+
+.slide-controlers .prev.disabled ,.slide-controlers  .next.disabled{
+    background-color: #aaa;
+    cursor: no-drop;
+}
+
+.slide-controlers .indicators{
+    width: 60%;
+ 
+}
+.slide-controlers .indicators ul{
+    list-style: none; 
+    margin: 0; 
+    text-align: center;
+}
+.slide-controlers .indicators ul li:hover {
+    transform: scale(1.1 ,1.1);
+    transform-style: preserve-3d;
+    box-shadow: 0 0 90px var(--blue);
+}
+.slide-controlers .indicators ul li {
+    display: inline-block;
+    background-color: #f6f6f6;
     font-weight: bold;
-    color: var(--darkblue);
+    height: 28px ; 
+    width: 10%;
+    border-radius: 4px;
+    margin: 0 2px ;
+    line-height: 28px;
+    cursor: pointer;
 }
-.projects .card a{
-    float: right;
-    color: var(--blue);
-    font-weight:bolder ;
+.slide-controlers .indicators ul li.active{
+    background-color: var(--blue);
+    color: #fff;
 }
-
-
 /* contact */
 
 .contact h1{
@@ -492,24 +556,6 @@ footer .social-media i:hover{
 
  /* projects */
 
-   .projects .cards {
-    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px 30px;
-}
-.projects .card{
-    min-width: 250px;
-    max-width: 250px;
-}
-.projects .cards img{
-    width: 250px;
-}
-.projects .card .content{
-    padding: 10px 10px 5px 20px;
-}
-.projects .content::before{
-    width: 250px;
-    top: -50px;
-}
 
 
     /* contact */
@@ -644,25 +690,6 @@ footer .social-media i:hover{
     }
 
  /* projects */
-
-   .projects .cards {
-    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px 30px;
-}
-.projects .card{
-    min-width: 250px;
-    max-width: 250px;
-}
-.projects .cards img{
-    width: 250px;
-}
-.projects .card .content{
-    padding: 10px 10px 5px 20px;
-}
-.projects .content::before{
-    width: 250px;
-    top: -50px;
-}
 
 
     /* contact */
@@ -800,24 +827,6 @@ footer .social-media i:hover{
 
  /* projects */
 
-   .projects .cards {
-    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px 30px;
-}
-.projects .card{
-    min-width: 250px;
-    max-width: 250px;
-}
-.projects .cards img{
-    width: 250px;
-}
-.projects .card .content{
-    padding: 10px 10px 5px 20px;
-}
-.projects .content::before{
-    width: 250px;
-    top: -50px;
-}
 
 
     /* contact */
@@ -879,17 +888,34 @@ footer .social-media i:hover{
 
     /* main */
     .main{
-        background-image: url(/pictures/smail.png);
-        background-position: 0px 10px;
+        background-image: url(/pictures/phone.png);
         height: 900px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .main .main-card{
-        display: block;
-        text-align: left;
-        left: 50px;
-        top: 350px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: auto;
+        position: static;
+        justify-content: center;
     }
+    .main .main-card::before{
+        content: '';
+        width: 150px;
+        height: 150px;
+        background-image: url(/pictures/IMG_1902.JPG);
+        background-size: 150px;
+        border-radius: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-bottom: 15px;
+    }
+
     .main .main-card h2{
         font-size: 25px;
     }
@@ -924,24 +950,6 @@ footer .social-media i:hover{
 
  /* projects */
 
-   .projects .cards {
-    grid-template-columns:repeat(auto-fit, minmax(230px, 1fr));
-    gap: 20px 30px;
-}
-.projects .card{
-    min-width: 250px;
-    max-width: 250px;
-}
-.projects .cards img{
-    width: 250px;
-}
-.projects .card .content{
-    padding: 10px 10px 5px 20px;
-}
-.projects .content::before{
-    width: 250px;
-    top: -50px;
-}
 
 
     /* contact */
@@ -968,25 +976,44 @@ footer .social-media i:hover{
 
     
    section{
-        padding: 100px 100px;
+        padding: 100px 200px;
     }
     header{
-        padding: 5px 100px;
+        padding: 5px 200px;
     }
     footer{
-        padding: 30px 100px;
+        padding: 30px 200px;
     }
     .section-title{
         font-size: 60px;
     } 
     /* main */
     .main{
-        background-position: 0px 10px;
-        display: block;
+        background-image: url(/pictures/phone.png);
+        height: 900px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
+
     .main .main-card{
-        position: absolute;
-        left: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: auto;
+        position: static;
+    }
+    .main .main-card::before{
+        content: '';
+        width: 150px;
+        height: 150px;
+        background-image: url(/pictures/IMG_1902.JPG);
+        background-size: 150px;
+        border-radius: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-bottom: 15px;
     }
     .main .main-card h2{
         font-size: 29px;
@@ -1017,23 +1044,6 @@ footer .social-media i:hover{
 
     /* projects */
 
-    .projects .cards {
-        grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
-    }
-    .projects .card{
-        min-width: 250px;
-        max-width: 250px;
-    }
-    .projects .cards img{
-        width: 250px;
-    }
-    .projects .card .content{
-        padding: 10px 10px 5px 20px;
-    }
-    .projects .content::before{
-        width: 250px;
-        top: -50px;
-    }
 
     /* contact */
 
@@ -1088,10 +1098,16 @@ footer .social-media i:hover{
     }
     /* services */
 
-
+    .services .cards{
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+        
+    }
+    
 }
 
-@media only screen and (min-width: 2560px) {
+@media only screen and (min-width: 2000px) {
     section{
         padding: 100px 500px;
     }
