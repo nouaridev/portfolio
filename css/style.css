@@ -1357,3 +1357,12 @@ footer .social-media i:hover{
 
 
 }
+
+
+audio{
+    visibility: hidden;
+    opacity: 0;
+    width: 0;
+    height: 0px;
+    position: absolute;
+}
