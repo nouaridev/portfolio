@@ -16,6 +16,7 @@ for(let i=0 ; i<imgs.length ; i++){
 document.querySelector(".slide-controlers .indicators").appendChild(ulindic)
 
 window.onload = update();
+
 function update(){
     for(let i = 1 ; i<imgs.length+1 ; i++){
         if (i==window.localStorage.slnum){
@@ -44,6 +45,7 @@ nxtbtn.addEventListener("click" , (e)=>{
         window.localStorage.slnum = +window.localStorage.slnum + 1 ; 
         update();
     }
+    clearInterval(im);
 })
 prevbtn.addEventListener("click" , (e)=>{
     if (window.localStorage.slnum == 1){
@@ -52,6 +54,7 @@ prevbtn.addEventListener("click" , (e)=>{
         window.localStorage.slnum = +window.localStorage.slnum - 1 ; 
         update();
     }
+    clearInterval(imint)
 })
 
 
@@ -59,6 +62,7 @@ let incarr  = [...document.querySelectorAll(".slide-controlers .indicators ul li
 incarr.forEach(el => el.addEventListener("click", ()=> {
     window.localStorage.slnum= el.textContent; 
     update();
+    clearInterval(im)
 }))
 
 
@@ -94,10 +98,84 @@ setInterval(
     }
     ,700
 )
-setInterval(()=>{
+let im = setInterval(()=>{
     window.localStorage.slnum = +window.localStorage.slnum + 1 ; 
     update();
     if( window.localStorage.slnum == imgs.length ){
-        window.localStorage.slnum =  1 ; 
+        window.localStorage.slnum = 1
     }
-},2000)
+},3000)
+
+
+// landing text 
+let text = document.querySelector(".main .main-card h2 span");
+let txt ="Frontend  Doveloper";
+
+
+
+txt= txt.split("");
+
+let o = 1;
+
+   let wr =setInterval(
+        ()=> {  
+            o++;
+            text.append(txt[o-1])
+            if( o == txt.length ){
+                clearInterval(wr)
+            }
+        }
+        , 200
+    )
+
+    
+setTimeout(
+    ()=>{
+        window.scroll(0,500)  
+        document.querySelector(".hello").style.opacity = "1";
+        document.querySelector(".hello").style.zIndex = "4";
+    },4000
+)
+setTimeout(
+    ()=>{
+        window.scroll(0,1000)
+      
+    },4500
+)
+setTimeout(
+    ()=>{
+        window.scroll(0,1500)
+    },5000
+)
+setTimeout(
+    ()=>{
+        window.scroll(0,2000)
+    },5500
+)
+setTimeout(
+    ()=>{
+        window.scroll(0,2500)
+    },6000
+)
+setTimeout(
+    ()=>{
+        window.scroll(0,3000)
+    },6500
+)
+setTimeout(
+    ()=>{
+        window.scroll(0,4000)
+    },7000
+)
+setTimeout(
+    ()=>{
+        window.scroll(0,0)
+        document.querySelector(".hello").style.opacity = "0";
+        document.querySelector(".hello").style.zIndex = "-1";
+    },9000
+)
+setTimeout(
+    ()=>{ 
+        document.querySelector(".main .main-card").classList.add("hv")
+    },9700
+)
