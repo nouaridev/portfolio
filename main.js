@@ -102,7 +102,7 @@ let im = setInterval(()=>{
     window.localStorage.slnum = +window.localStorage.slnum + 1 ; 
     update();
     if( window.localStorage.slnum == imgs.length ){
-        window.localStorage.slnum = 0;
+        window.localStorage.slnum = 0; nxtbtn.classList.remove("disabled");
     }
 },3000)
 
