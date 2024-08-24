@@ -7,11 +7,11 @@
     <title>Ismail Nouari</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/all.min.css">
+    <link rel="stylesheet" href="/css/shapes.css">
 </head>
 <body>
 <div class="parent">
-    <div class="container">
-      
+
         <header>
             <p class="logo">Ismail</p>
             <nav class="navigation">
@@ -22,7 +22,8 @@
             </nav>
         </header>
 
-        <section class="main">
+        <section class="main large-header" id="large-header" >
+               <canvas id="demo-canvas"></canvas>
             <div class="main-card">
                <div class="imc"> <Img src="/pictures/IMG_1902.png"></Img></div>
                 <h2>Hello , I'm Ismail <br> <span>F</span> <h2>
@@ -37,6 +38,7 @@
             </div>
 
         </section>
+
 
         <section class="services" id="services">
             <h1 class="section-title">Services</h1>
@@ -63,6 +65,7 @@
                 </div>
             </div>
         </section>
+   
 
         <section class="projects" id="projects">
             <h1 class="section-title">Projects</h1>
@@ -71,7 +74,7 @@
                         <a href="elfamilya.html" class="active"><img src="/pictures/elfamilya.PNG" alt=""><div class="desc">ELFAMILYA</div></a>
                         <a href="NRIacademy.html"><img src="/pictures/nriacademyPNG.PNG" alt=""><div class="desc">NOUARI ACADEMY</div></a>
                         <a href="huddle.html"><img src="/pictures/huddle.PNG" alt=""><div class="desc">HUDDLE TEMPLATE</div></a>
-                        <a href="coffe.html"><img src="/pictures/coffe.PNG" alt=""><div class="desc">SIPLE COFFE LANDING PAGE</div></a>
+                     
                   <div class="slide-controlers">
                     <span  class="prev" id="prev"><</span>
                     <span id="indicators" class="indicators"> </span>
@@ -155,9 +158,13 @@
     </div>
 </div>
 
-
+  <!-- partial -->
+    <script src='https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/EasePack.min.js'></script>
+  <script src='https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/rAF.js'></script>
+  <script src='https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/TweenLite.min.js'></script><script  src="script.js"></script>
 
  <script src="main.js"></script>
+ <script src="script.js"></script>
 
 </body>
 </html>

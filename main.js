@@ -54,7 +54,7 @@ prevbtn.addEventListener("click" , (e)=>{
         window.localStorage.slnum = +window.localStorage.slnum - 1 ; 
         update();
     }
-    clearInterval(imint)
+    clearInterval(im)
 })
 
 
@@ -102,7 +102,7 @@ let im = setInterval(()=>{
     window.localStorage.slnum = +window.localStorage.slnum + 1 ; 
     update();
     if( window.localStorage.slnum == imgs.length ){
-        window.localStorage.slnum = 1
+        window.localStorage.slnum = 0;
     }
 },3000)
 
@@ -125,57 +125,82 @@ let o = 1;
                 clearInterval(wr)
             }
         }
-        , 200
+        , 100
     )
 
     
 setTimeout(
     ()=>{
-        window.scroll(0,500)  
         document.querySelector(".hello").style.opacity = "1";
         document.querySelector(".hello").style.zIndex = "4";
     },4000
 )
-setTimeout(
-    ()=>{
-        window.scroll(0,1000)
+// setTimeout(
+//     ()=>{
+//         window.scroll(0,1000)
       
-    },4500
-)
+//     },4500
+// )
+// setTimeout(
+//     ()=>{
+//         window.scroll(0,1500)
+//     },5000
+// )
+// setTimeout(
+//     ()=>{
+//         window.scroll(0,2000)
+//     },5500
+// )
+// setTimeout(
+//     ()=>{
+//         window.scroll(0,2500)
+//     },6000
+// )
+// setTimeout(
+//     ()=>{
+//         window.scroll(0,3000)
+//     },6500
+// )
+// setTimeout(
+//     ()=>{
+//         window.scroll(0,4000)
+//     },7000
+// )
 setTimeout(
     ()=>{
-        window.scroll(0,1500)
-    },5000
-)
-setTimeout(
-    ()=>{
-        window.scroll(0,2000)
-    },5500
-)
-setTimeout(
-    ()=>{
-        window.scroll(0,2500)
-    },6000
-)
-setTimeout(
-    ()=>{
-        window.scroll(0,3000)
-    },6500
-)
-setTimeout(
-    ()=>{
-        window.scroll(0,4000)
+        // window.scroll(0,0)
+        document.querySelector(".hello").style.opacity = "0";
+
     },7000
 )
 setTimeout(
     ()=>{
-        window.scroll(0,0)
-        document.querySelector(".hello").style.opacity = "0";
         document.querySelector(".hello").style.zIndex = "-1";
-    },9000
+    },7600
 )
+
 setTimeout(
     ()=>{ 
         document.querySelector(".main .main-card").classList.add("hv")
-    },9700
+    },2000
 )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
