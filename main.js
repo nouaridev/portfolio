@@ -109,7 +109,7 @@ let im = setInterval(()=>{
 
 // landing text 
 let text = document.querySelector(".main .main-card h2 span");
-let txt ="Frontend  Doveloper";
+let txt ="Frontend  Developer";
 
 
 
