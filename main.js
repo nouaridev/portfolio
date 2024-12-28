@@ -109,74 +109,83 @@ let im = setInterval(()=>{
 
 // landing text 
 let text = document.querySelector(".main .main-card h2 span");
-let txt ="Frontend  Developer";
+let txt ="Frontend  Developer (Beginner)";
 
 
 
 txt= txt.split("");
-
+setTimeout(()=>{
+    
 let o = 1;
 
-   let wr =setInterval(
-        ()=> {  
-            o++;
-            text.append(txt[o-1])
-            if( o == txt.length ){
-                clearInterval(wr)
-            }
-        }
-        , 100
-    )
+let wr =setInterval(
+     ()=> {  
+         o++;
+         text.append(txt[o-1])
+         if( o == txt.length ){
+             clearInterval(wr)
+         }
+     }
+     , 100
+ )
+} , 8500)
 
     
 setTimeout(
     ()=>{
         document.querySelector(".hello").style.opacity = "1";
         document.querySelector(".hello").style.zIndex = "4";
-    },4000
+    },0
 )
-// setTimeout(
-//     ()=>{
-//         window.scroll(0,1000)
-      
-//     },4500
-// )
-// setTimeout(
-//     ()=>{
-//         window.scroll(0,1500)
-//     },5000
-// )
-// setTimeout(
-//     ()=>{
-//         window.scroll(0,2000)
-//     },5500
-// )
-// setTimeout(
-//     ()=>{
-//         window.scroll(0,2500)
-//     },6000
-// )
-// setTimeout(
-//     ()=>{
-//         window.scroll(0,3000)
-//     },6500
-// )
-// setTimeout(
-//     ()=>{
-//         window.scroll(0,4000)
-//     },7000
-// )
 setTimeout(
     ()=>{
-        // window.scroll(0,0)
-        document.querySelector(".hello").style.opacity = "0";
-
+        window.scroll(0,1000)
+      
+    },4500
+)
+setTimeout(
+    ()=>{
+        window.scroll(0,1500)
+    },5000
+)
+setTimeout(
+    ()=>{
+        window.scroll(0,2000)
+    },5500
+)
+setTimeout(
+    ()=>{
+        window.scroll(0,2500)
+    },6000
+)
+setTimeout(
+    ()=>{
+        window.scroll(0,3000)
+    },6500
+)
+setTimeout(
+    ()=>{
+        window.scroll(0,4000)
     },7000
 )
 setTimeout(
     ()=>{
+ 
+        document.querySelector(".hello").style.opacity = "0";
+
+    },7500
+)
+setTimeout(
+    ()=>{
+        window.scroll(0,0)
+
+
+    },8000
+)
+setTimeout(
+    ()=>{
         document.querySelector(".hello").style.zIndex = "-1";
-    },7600
+    },8000
 )
 
 setTimeout(
