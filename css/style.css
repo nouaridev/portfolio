@@ -266,14 +266,14 @@ canvas{
     margin-left: -160px;
 
     transition: 1s;
-    transition-delay: 7s;
+    transition-delay: 6s;
 }
 .main .main-card.hv .imc{
     transform-style: preserve-3d;
     box-shadow: 0 0 90px var(--blue) inset; 
 
     transition: 1s;
-    transition-delay: 7s;
+    transition-delay: 6s;
 }
 .main .main-card h2{
     color: var(--greywight);

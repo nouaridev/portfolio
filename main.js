@@ -109,7 +109,7 @@ let im = setInterval(()=>{
 
 // landing text 
 let text = document.querySelector(".main .main-card h2 span");
-let txt ="Frontend  Developer (Beginner)";
+let txt ="Frontend  Developer";
 
 
 
@@ -139,35 +139,35 @@ setTimeout(
 )
 setTimeout(
     ()=>{
-        window.scroll(0,1000)
+        window.scroll(0,0)
       
-    },4500
+    },0
 )
-setTimeout(
-    ()=>{
-        window.scroll(0,1500)
-    },5000
-)
-setTimeout(
-    ()=>{
-        window.scroll(0,2000)
-    },5500
-)
-setTimeout(
-    ()=>{
-        window.scroll(0,2500)
-    },6000
-)
-setTimeout(
-    ()=>{
-        window.scroll(0,3000)
-    },6500
-)
-setTimeout(
-    ()=>{
-        window.scroll(0,4000)
-    },7000
-)
+// setTimeout(
+//     ()=>{
+//         window.scroll(0,1500)
+//     },5000
+// )
+// setTimeout(
+//     ()=>{
+//         window.scroll(0,2000)
+//     },5500
+// )
+// setTimeout(
+//     ()=>{
+//         window.scroll(0,2500)
+//     },6000
+// )
+// setTimeout(
+//     ()=>{
+//         window.scroll(0,3000)
+//     },6500
+// )
+// setTimeout(
+//     ()=>{
+//         window.scroll(0,4000)
+//     },7000
+// )
 setTimeout(
     ()=>{
  
