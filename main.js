@@ -128,7 +128,7 @@ let wr =setInterval(
      }
      , 100
  )
-} , 8500)
+} , 15000)
 
     
 setTimeout(
@@ -173,25 +173,19 @@ setTimeout(
  
         document.querySelector(".hello").style.opacity = "0";
 
-    },7500
+    },14500
 )
-setTimeout(
-    ()=>{
-        window.scroll(0,0)
 
-
-    },8000
-)
 setTimeout(
     ()=>{
         document.querySelector(".hello").style.zIndex = "-1";
-    },8000
+    },15000
 )
 
 setTimeout(
     ()=>{ 
         document.querySelector(".main .main-card").classList.add("hv")
-    },2000
+    },9000
 )
 
 
